@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Md. Himel Ali",
+      "email": "himel.phy160@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Marufa Yasmin",
+      "email": "marufa@gmail.com",
+      "password": "123",
+      "id": 2
+    }
+  ]
+}
