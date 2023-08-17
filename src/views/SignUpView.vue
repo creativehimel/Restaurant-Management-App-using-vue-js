@@ -1,7 +1,8 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
 import axios from 'axios'
 import router from "@/router";
+
 
 const registerDetails = reactive({
   name: '',
@@ -20,6 +21,12 @@ async function signUp() {
     router.push('/')
   }
 }
+onMounted(()=>{
+  let user = localStorage.getItem('user-info')
+  if (user){
+    router.push('/')
+  }
+})
 </script>
 
 <template>
