@@ -11,6 +11,12 @@
       "email": "telly.Hoeger@billy.biz",
       "password": "123",
       "id": 2
+    },
+    {
+      "name": "demo user",
+      "email": "demo@gmail.com",
+      "password": "123456",
+      "id": 3
     }
   ]
 }

@@ -1,10 +1,11 @@
 <script setup>
-import SignUp from "@/components/SignUp.vue";
+
+import {RouterView, RouterLink} from "vue-router";
 </script>
 
 <template>
   <section>
-    <SignUp/>
+    <RouterView/>
   </section>
 </template>
 
