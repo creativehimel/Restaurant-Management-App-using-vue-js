@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import router from '@/router'
+import Header from '@/components/Header.vue'
 
 onMounted(() => {
   let user = localStorage.getItem('user-info')
@@ -12,6 +13,7 @@ onMounted(() => {
 
 <template>
   <section>
+    <Header />
     <h1>Hello User, Welcome to Home Page</h1>
   </section>
 </template>
