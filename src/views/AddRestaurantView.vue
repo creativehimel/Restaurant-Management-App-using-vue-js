@@ -2,6 +2,7 @@
 import { onMounted, reactive, ref } from 'vue'
 import router from '@/router'
 import Header from '@/components/Header.vue'
+import axios from 'axios'
 const userName = ref('')
 onMounted(() => {
   let user = localStorage.getItem('user-info')
@@ -15,7 +16,16 @@ const restaurantDetails = reactive({
   number: '',
   address: ''
 })
-function addRestaurant() {}
+async function addRestaurant() {
+  const result = await axios.post('http://localhost:3000/restaurant', {
+    name: restaurantDetails.name,
+    number: restaurantDetails.number,
+    address: restaurantDetails.address
+  })
+  if (result.status == 201) {
+    router.push('/')
+  }
+}
 </script>
 
 <template>

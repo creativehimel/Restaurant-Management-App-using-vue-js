@@ -43,7 +43,24 @@
       "name": "Bhooter Bari",
       "number": "01748947575",
       "address": "Haji Rustom Ali Super Market. College Road Gopalgonj, Dhaka, Bangladesh"
+    },
+    {
+      "name": "Bar B Que Restaurant",
+      "number": "01778013588",
+      "address": "College Rd, Gopalganj",
+      "id": 6
+    },
+    {
+      "name": "Luminous Pizza",
+      "number": "01726332795",
+      "address": "62 Bangabandhu Rd, Gopalganj",
+      "id": 7
+    },
+    {
+      "name": "Lakeview Cafe & Eatery",
+      "number": "01730-910767",
+      "address": "245 Deobogh Pakka Road, Shekh rasel park, Narayanganj, Bangladesh",
+      "id": 8
     }
-
   ]
 }
