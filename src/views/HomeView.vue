@@ -1,11 +1,10 @@
 <script setup>
+import { onMounted } from 'vue'
+import router from '@/router'
 
-import {onMounted} from "vue";
-import router from "@/router";
-
-onMounted(()=>{
+onMounted(() => {
   let user = localStorage.getItem('user-info')
-  if (!user){
+  if (!user) {
     router.push('/sign-up')
   }
 })

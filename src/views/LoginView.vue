@@ -1,5 +1,27 @@
 <script setup>
+import { onMounted, reactive } from 'vue'
+import axios from 'axios'
+import router from '@/router'
 
+const logInData = reactive({
+  email: '',
+  password: ''
+})
+async function logIn() {
+  let result = await axios.get(
+    `http://localhost:3000/users?email=${logInData.email}&password=${logInData.password}`
+  )
+  if (result.status == 200 && result.data.length > 0) {
+    localStorage.setItem('user-info', JSON.stringify(result.data[0]))
+    router.push('/')
+  }
+}
+onMounted(() => {
+  let user = localStorage.getItem('user-info')
+  if (user) {
+    router.push('/')
+  }
+})
 </script>
 
 <template>
@@ -11,26 +33,26 @@
           <div class="flex flex-col space-y-2">
             <label class="text-lg font-medium tracking-wide" for="email">Email</label>
             <input
-
-                class="border px-3 py-1.5 rounded focus:outline-indigo-300"
-                type="email"
-                name="email"
-                id="email"
+              v-model="logInData.email"
+              class="border px-3 py-1.5 rounded focus:outline-indigo-300"
+              type="email"
+              name="email"
+              id="email"
             />
           </div>
           <div class="flex flex-col space-y-2 pb-3">
             <label class="text-lg font-medium tracking-wide" for="password">Password</label>
             <input
-
-                class="border px-3 py-1.5 rounded focus:outline-indigo-300"
-                type="password"
-                name="password"
-                id="password"
+              v-model="logInData.password"
+              class="border px-3 py-1.5 rounded focus:outline-indigo-300"
+              type="password"
+              name="password"
+              id="password"
             />
           </div>
           <button
-              @click="logIn()"
-              class="bg-indigo-500 px-6 py-3 rounded tracking-wider text-white text-lg hover:bg-indigo-600 duration-300"
+            @click="logIn()"
+            class="bg-indigo-500 px-6 py-3 rounded tracking-wider text-white text-lg hover:bg-indigo-600 duration-300"
           >
             Log In
           </button>
@@ -40,6 +62,4 @@
   </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
