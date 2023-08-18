@@ -20,12 +20,12 @@ function logOut() {
         <li
           class="hover:bg-indigo-500 px-3 py-2 rounded hover:text-white font-bold text-gray-600 text-sm"
         >
-          <RouterLink to="/">About</RouterLink>
+          <RouterLink to="/add">Add Restaurant</RouterLink>
         </li>
         <li
           class="hover:bg-indigo-500 px-3 py-2 rounded hover:text-white font-bold text-gray-600 text-sm"
         >
-          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/update">Update Restaurant</RouterLink>
         </li>
         <li
           class="hover:bg-indigo-500 px-3 py-2 rounded hover:text-white font-bold text-gray-600 text-sm"

@@ -1,10 +1,11 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import router from '@/router'
 import Header from '@/components/Header.vue'
-
+const userName = ref('')
 onMounted(() => {
   let user = localStorage.getItem('user-info')
+  userName.value = JSON.parse(user).name
   if (!user) {
     router.push('/login')
   }
@@ -14,7 +15,10 @@ onMounted(() => {
 <template>
   <section>
     <Header />
-    <h1>Hello User, Welcome to Home Page</h1>
+    <h1 class="text-xl">
+      Hello <span class="text-green-500 font-medium">{{ userName }}</span
+      >, Welcome to Update Restaurant Page
+    </h1>
   </section>
 </template>
 
