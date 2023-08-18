@@ -18,5 +18,32 @@
       "password": "123456",
       "id": 3
     }
+  ],
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "FNF Restaurant",
+      "number": "01701317778",
+      "address": "282 binapani school road , Gopalganj, Bangladesh"
+    },
+    {
+      "id": 2,
+      "name": "Cafe In Heaven",
+      "number": "01729932195",
+      "address": "133, Chadmari road, Bankpara, Gopalganj, Bangladesh"
+    },
+    {
+      "id": 3,
+      "name": "Bagan Baree Rooftop Restora",
+      "number": "01791571767",
+      "address": "163, college road, Gopalganj, Bangladesh"
+    },
+    {
+      "id": 4,
+      "name": "Bhooter Bari",
+      "number": "01748947575",
+      "address": "Haji Rustom Ali Super Market. College Road Gopalgonj, Dhaka, Bangladesh"
+    }
+
   ]
 }
